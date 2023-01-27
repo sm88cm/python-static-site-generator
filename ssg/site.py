@@ -2,14 +2,9 @@ from pathlib import Path
 
 class Site:
 
-    def __new__(site, *args, **kwargs):
-        print("Create new instance of site")
-        return super().__new__(site)
-
-    def __init__(self, source, dest):
-        print("Initiliase the new stane of site.")
+    def Site(self, source, dest):
         self.source = Path( source )
-        self.dest = dest
+        self.dest = Path( dest )
 
     def create_dir(self, path):
         directory = self.dest+"/"+self.source
